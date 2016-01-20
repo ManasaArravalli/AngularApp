@@ -1,0 +1,21 @@
+<div ng-app="animateApp">
+  <div ng-controller="TopController">
+    <div class="spinner" ng-hide="loaded"></div>
+    <div ng-cloak="" ng-show="loaded">
+
+      <img src="welcome.jpg">
+
+      <div class="page-home">
+        <h1>Welcome to the world of jQuery and AngularJS </h1>
+        <h2> Click on the buttons below to learn more about each function of jQuery in detail</h2>
+        <a href="#about" class="btn btn-primary btn-lg">fadeIn</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Animate</a>
+        <a href="#slide" class="btn btn-primary btn-lg">Slide</a>
+        <div class="page {{ pageClass }}" ng-view></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

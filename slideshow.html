@@ -1,0 +1,65 @@
+
+<div class="container slider">
+
+
+	<img class="slidephoto"ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+
+	
+
+
+	<ul class="nav">
+		<li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			<img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />{{photo.desc}}
+		</li>
+	</ul>
+
+</div>
+<a href="#home" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home">Home</span></a>
+<a href="#contact" class="btn btn-primary btn-lg">Animate</a>
+<a href="#about" class="btn btn-primary btn-lg">fadeIn</a>
+
+<a href="#" class="btn btn-success btn-lg logout">Logout</a>
+<footer>
+	<p>&copy; Manasa Reddy</p>
+	<!--<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>-->
+</footer>
+<!--<!DOCTYPE html>
+<html ng-app="animateApp">
+<head>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.0rc1/angular.js"></script>
+	<script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+
+
+<body ng-controller="slideCtrl">
+
+
+
+	<div class="container slider">
+
+
+		<img class="slidephoto" ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+
+		<a class="arrow prev" href="#" ng-click="showPrev()"></a>
+		<a class="arrow next" href="#" ng-click="showNext()"></a>
+
+
+		<ul class="nav">
+			<li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+				<img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>-->

@@ -1,0 +1,18 @@
+<h1>Learn  <img src="jquery.png"><img src="login_img.gif"></h1>
+<div>
+
+	<form ng-submit="login(username, password)" class="ng-scope ng-pristine ng-valid">
+		<label>User name</label>
+		<input type="text" ng-model="username" class="ng-pristine ng-valid">
+		<label>Password</label>
+		<input type="password" ng-model="password" class="ng-pristine ng-valid">
+		<div>
+			{{loginError}}  {{loggedUser}}
+		</div>
+		<div>
+			<button class="btn btn-info btn-lg" ng-click=""><span class="glyphicon glyphicon-user">Login</span></button>
+			<button class="btn btn-warning btn-lg" ng-click="cancel()"><span class="glyphicon glyphicon-remove">Cancel</span></button>
+		</div>
+
+	</form>
+</div>

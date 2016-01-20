@@ -1,0 +1,45 @@
+<div ng-app="animateApp">
+	<div class="quiz-area" ng-show="inProgress">
+		<div ng-show="!quizOver">
+			<h2 id="question">{{question}}</h2>
+			<ul id="options">
+				<li ng-repeat="option in options">
+					<label>
+						<input type="radio" name="answer" value="{{option}}">
+						{{option}}
+					</label>
+				</li>
+			</ul>
+			<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+
+			<div ng-show="!answerMode">
+				<button ng-click="nextQuestion()" class="next-question">Next</button>
+				<span ng-show="correctAns">That is correct!</span>
+				<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
+			</div>
+		</div>
+
+		<div ng-show="quizOver">
+			<h2>Quiz is done</h2>
+			<button ng-click="reset()">Want to test again?</button>
+		</div>
+
+		<div id="score">
+			Score: {{score}}
+		</div>
+	</div>
+
+	<div class="intro" ng-show="!inProgress">
+		<p>Perfect in jQuery ?</p>
+		<button quiz id="startQuiz">Ready to attempt Quiz ? </button>
+	</div>
+</div>
+<a href="#home" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home">Home</span></a>
+<a href="#contact" class="btn btn-primary btn-lg">Animate</a>
+<a href="#about" class="btn btn-primary btn-lg">fadeIn</a>
+<a href="#quiz" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-pencil">Quiz?</span></a>
+<a href="#" class="btn btn-success btn-lg logout">Logout</a>
+<footer>
+	<p>&copy; Manasa Reddy</p>
+	<!--<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>-->
+</footer>
